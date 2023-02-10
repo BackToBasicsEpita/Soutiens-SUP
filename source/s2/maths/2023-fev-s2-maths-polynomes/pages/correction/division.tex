@@ -1,0 +1,35 @@
+\begin{enumerate}
+    \item Soit $(A, B) \in \ensR[X]^2$ avec $B \neq 0$. Énoncer le théorème de la division euclidienne de $A$ par $B$.
+
+    \begin{theorem}[black]{Théorème de la division euclidienne}
+        Soient $A, B$ deux polynômes dans $\ensK[X]$ avec $B \neq 0$.
+
+        $$
+            \exists ! (Q, R) \in \ensK[X]^2, A = BQ + R \hspace{10px} \text{avec } deg(R) < deg(B)
+        $$
+    \end{theorem}
+    
+    \item Effectuer la division euclidienne de $X^4 + 5X^3 + 12X^2 + 19X - 7$ par $X^2 + 3X - 1$.
+
+    \begin{theorem}[black]{Division euclidienne de $X^4 + 5X^3 + 12X^2 + 19X - 7$ par $X^2 + 3X - 1$}
+        \begin{center}
+            \polylongdiv[style=D]{X^4 + 5X^3 + 12X^2 + 19X - 7}{X^2 + 3X - 1}
+        \end{center}
+
+        \vspace{10px}
+
+        \noindent Donc, on a $X^4 + 5X^3 + 12X^2 + 19X - 7 = (X^2 + 3X - 1)(X^2 + 2X + 7)$.
+    \end{theorem}
+    
+    \item Effectuer la division euclidienne de $X^4 - 4X^3 - 9X^2 + 27X + 38$ par $X^2 - X - 7$.
+
+    \begin{theorem}[black]{Division euclidienne de $X^4 - 4X^3 - 9X^2 + 27X + 38$ par $X^2 - X - 7$}
+        \begin{center}
+            \polylongdiv[style=D]{X^4 - 4X^3 - 9X^2 + 27X + 38}{X^2 - X - 7}
+        \end{center}
+
+        \vspace{10px}
+
+        \noindent Donc, on a $X^4 - 4X^3 - 9X^2 + 27X + 38 = (X^2 - X - 7)(X^2 - 3X - 5) + X + 3$.
+    \end{theorem}
+\end{enumerate}

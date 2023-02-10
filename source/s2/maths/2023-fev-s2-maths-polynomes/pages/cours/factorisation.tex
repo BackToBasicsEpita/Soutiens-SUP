@@ -1,0 +1,31 @@
+\begin{theorem}[red]{Définition 4.1 : Polynômes irréductibles}
+    Soit $P \in \ensK[X]$ un polynôme de degré $n \geq 1$. \\
+    On dit que $P$ est \textbf{irréductible} si pour tout $Q \in \ensK[X]$ divisant $P$, alors
+
+    \begin{itemize}
+        \item Soit $Q \in \ensK*$
+        \item Soit $\exists \lambda \in \ensK*, Q = \lambda P$
+    \end{itemize}
+\end{theorem}
+
+\begin{theorem}[orange]{Théorème 4.2 : Factorisation dans l'ensemble des polynômes complexes}
+    Les polynômes irréductibles de $\ensC[X]$ sont les \textbf{polynôme de degré 1}. \\
+    Donc, pour $P \in \ensC[X]$ de degré $n \geq 1$, la factorisation s'écrit
+
+    $$
+        P = \lambda(X - \alpha_1)^{k_1} \times (X - \alpha_2)^{k_2} \times ... \times (X - \alpha_r)^{k_r}
+    $$
+
+    \noindent avec $\alpha_1, ..., \alpha_r$ les racines distinctes de $P$ et $k_1, ..., k_r$ leur multiplicité.
+\end{theorem}
+
+\begin{theorem}[orange]{Théorème 4.3 : Factorisation dans l'ensemble des polynômes réels}
+    Les polynômes irréductibles de $\ensR[X]$ sont les \textbf{polynôme de degré 1} et les \textbf{polynômes de degré 2} donc leur discriminant $\Delta < 0$. \\
+    Donc, pour $P \in \ensR[X]$ de degré $n \geq 1$, la factorisation s'écrit
+
+    $$
+        P = \lambda(X - \alpha_1)^{k_1} \times (X - \alpha_2)^{k_2} \times ... \times (X - \alpha_r)^{k_r} \times Q_1^{l_1} \times ... \times Q_s^{l_s}
+    $$
+
+    \noindent avec $\alpha_1, ..., \alpha_r$ les racines réelles distinctes de $P$ et $k_1, ..., k_r$ leur multiplicité et $Q_i$ les polynômes irréductibles de degré 2 et de multiplicité $l_i$
+\end{theorem}

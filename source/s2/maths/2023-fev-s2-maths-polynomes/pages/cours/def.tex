@@ -1,0 +1,33 @@
+\begin{theorem}[red]{Définition 1.1 : Polynôme}
+    Un \textbf{polynôme} à coefficients dans $\ensK$ est une expression de la forme
+
+    $$
+        P(X) = a_nX^n + a_{n - 1}X^{n - 1} + ... + a_2X^2 + a_1X + a_0
+    $$
+
+    \noindent avec $n \in \ensN$ le \textbf{degré} de $P$ et les \textbf{coefficients} du polynôme $a_0, a_1, ..., a_n \in \ensK$ (où $\ensK$ désigne $\ensR$ ou $\ensC$). \\
+    On dit alors que $P \in \ensK[X]$.
+\end{theorem}
+
+\begin{theorem}[blue]{Propriété 1.2 : Opérations sur les polynômes et degré}
+    Soient $P, Q \in \ensK[X]$, \\
+
+    \noindent $deg(P \times Q) = deg(P) + deg(Q)$. \\
+    \noindent $deg(P + Q) = max(deg(P), \ deg(Q))$.
+\end{theorem}
+
+\begin{theorem}[black]{Exemple d'opérations sur les polynômes}
+    Soient $P(X) = 3X^3 + 4X + 5$ et $Q(X) = 4X^2 + 3$.
+
+    \begin{align*}
+        (P + Q)(X) &= 3X^3 + 4X + 5 + 4X^2 + 3 \\
+        &= 3X^3 + 4X^2 + 4X + 8
+    \end{align*}
+
+    \begin{align*}
+        (P \times Q)(X) &= (3X^3 + 4X + 5)(4X^2 + 3) \\
+        &= 3X^3 \times 4X^2 + 3X^3 \times 3 + 4X \times 4X^2 + 4X \times 3 + 5 \times 4X^2 + 5 \times 3 \\
+        &= 12X^5 + 9X^3 + 16X^3 + 12X + 20X^2 + 15 \\
+        &= 12X^5 + 25X^3 + 20X^2 + 12X + 15
+    \end{align*}
+\end{theorem}

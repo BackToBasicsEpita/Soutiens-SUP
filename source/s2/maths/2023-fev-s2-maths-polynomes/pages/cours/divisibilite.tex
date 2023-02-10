@@ -1,0 +1,49 @@
+\begin{theorem}[red]{Définition 2.1 : Divisibilité de  polynômes}
+    Soient $A, B \in \ensK[X]$. \\
+    $A$ \textbf{divise} $B$ si et seulement si $\exists Q \in \ensK[X], B = AQ$. \\
+    On note alors $A \ | \ B$.
+\end{theorem}
+
+\begin{theorem}[blue]{Propriété 2.2 : Divisibilité}
+    Soient $A, B, C$ trois polynômes non nuls à coefficients dans $\ensK$.
+
+    \begin{itemize}
+        \item Si $A \ | \ B$ et $B \ | \ C$, alors $ A \ | \ C$.
+        \item Si $A \ | \ B$ et $B \ | \ A$, alors $A = \lambda B$ avec $\lambda \in \ensK$.
+        \item Si $A \ | \ B$ et $A \ | \ C$, alors $\forall (P, Q) \in \ensK[X]^2, A \ | \ BP + CQ$.
+    \end{itemize}
+\end{theorem}
+
+\begin{theorem}[blue]{Propriété 2.3 : Divisibilité et degré}
+    Soient $A, B$ deux polynômes à coefficients dans $\ensK$.
+
+    \begin{itemize}
+        \item Si $A \ | \ B$ et $B \neq 0$, alors $deg(A) \leq deg(B)$.
+        \item Si $A \ | \ B$ et $deg(A) = deg(B)$, alors $A = \lambda B$ avec $\lambda \in \ensK^*$
+    \end{itemize}
+\end{theorem}
+
+\begin{theorem}[orange]{Théorème 2.4 : Division euclidienne}
+    Soient $A, B$ deux polynômes à coefficients dans $\ensK$ avec $B \neq 0$.
+
+    $$
+        \exists ! \ (Q, R) \in \ensK[X]^2, A = BQ + R \hspace{10px} \text{avec } deg(R) < deg(B)
+    $$
+
+    \noindent Le polynôme $Q$ est le quotient et le polynôme $R$ est le reste de la \textbf{division euclidienne} de $A$ par $B$.
+\end{theorem}
+
+\begin{theorem}[blue]{Propriété 2.5 : Divisibilité et division euclidienne}
+    Soient $A, B \in \ensK[X]$. \\
+    $B \ | \ A$ si et seulement si le reste de la division euclidienne de $A$ par $B$ est nul.
+\end{theorem}
+
+\begin{theorem}[black]{Exemple de division euclidienne}
+    \begin{center}
+        \polylongdiv[style=D]{2X^4 - X^2 + X - 5}{X^2 + X - 2}
+    \end{center}
+
+    \vspace{5px}
+
+    \noindent Donc, $2X^4 - X^2 + X - 5 = (X^2 + X - 2)(2X^2 - 2X + 5) - 8X + 5$.
+\end{theorem}

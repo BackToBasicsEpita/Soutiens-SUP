@@ -1,0 +1,46 @@
+\begin{theorem}[red]{Définition 3.1 : Racine d'un polynôme}
+    Soit $P \in \ensK[X]$. \\
+    On appelle \textbf{racine du polynôme} $P$ tout élément $\alpha \in \ensK$ tel que $P(\alpha) = 0$.
+\end{theorem}
+
+\begin{theorem}[blue]{Propriété 3.2 : Racine et divisibilité}
+    Soit $P \in \ensK[X]$. \\
+    $\alpha \in \ensK$ est une racine de $P$ si et seulement si $(X - \alpha) \ | \ P$. 
+\end{theorem}
+
+\begin{theorem}[red]{Définition 3.3 : Multiplicité d'une racine}
+    Soient $P \in \ensK[X]$, $\alpha \in \ensK$ et $n \in \ensN*$. \\
+    On dit que $\alpha$ est une \textbf{racine de multiplicité} $n$ (ou d'ordre $n$) si $(X - \alpha)^n \ | \ P$ et que $(X - \alpha)^{n + 1} \ \not| \ P$. \\
+
+    \noindent On parle de \textbf{racine simple} lorsque $n = 1$ et de \textbf{racine double} lorsque $n = 2$.
+\end{theorem}
+
+\begin{theorem}[blue]{Propriété 3.4 : Propriétés d'une racine}
+    Soient $P \in \ensK[X]$ et $\alpha \in \ensK$.
+    Il existe une équivalence entre ces trois points :
+
+    \begin{itemize}
+        \item $\alpha$ est une racine de multiplicité $n$ de $P$
+        \item $\exists Q \in \ensK[X], P = (X - \alpha)^nQ$  avec $Q(\alpha) \neq 0$
+        \item $P(\alpha) = P'(\alpha) = ... = P^{(n - 1)}(\alpha) = 0$ et $P^{(n)} \neq 0$
+    \end{itemize}
+\end{theorem}
+
+\begin{theorem}[orange]{Théorème 3.5 : Théorème de d'Alembert-Gauss}
+    Tout polynôme à coefficients complexes de degré $n \geq 1$ a au moins une racine dans $\ensC$. Il admet exactement $n$ racines si on compte chaque racine avec sa multiplicité.
+\end{theorem}
+
+\begin{theorem}[black]{Exemple d'un polynôme du second degré}
+    Soit $P(X) = aX^2 + bX + c$ un polynôme de degré 2 à coefficients réels, avec $a \neq 0$.
+
+    \begin{itemize}
+        \item Si $\Delta = b^2 - 4ac > 0$, alors $P$ admet 2 racines réelles distinctes $\displaystyle \frac{-b + \sqrt{\Delta}}{2a}$ et $\displaystyle \frac{-b - \sqrt{\Delta}}{2a}$.
+        \item Si $\Delta < 0$, alors $P$ admet 2 racines complexes distinctes $\displaystyle \frac{-b + i\sqrt{| \Delta |}}{2a}$ et $\displaystyle \frac{-b - i\sqrt{| \Delta |}}{2a}$.
+        \item Si $\Delta = 0$, alors $P$ admet une racine double $\displaystyle \frac{-b}{2a}$.
+    \end{itemize}
+\end{theorem}
+
+\begin{theorem}[orange]{Théorème 3.6 : Degré et racines}
+    Soit $P \in \ensK[X]$ de degré $n \geq 1$. \\
+    Alors, $P$ admet au plus $n$ racines dans $\ensK$.
+\end{theorem}

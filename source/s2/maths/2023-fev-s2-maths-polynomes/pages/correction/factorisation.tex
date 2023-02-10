@@ -1,0 +1,71 @@
+\begin{enumerate}
+    \item Factoriser $X^4 - 1$ dans $\ensC[X]$.
+
+    \begin{theorem}[black]{Factorisation de $X^4 - 1$}
+        \begin{align*}
+            X^4 - 1 &= (X^2)^2 - 1^2 \\
+            &= (X^2 - 1)(X^2 + 1) \\
+            &= (X^2 - 1^2)(X^2 - (-1)^2) \\
+            &= (X - 1)(X + 1)(X - i)(X + i)
+        \end{align*}
+    \end{theorem}
+    
+    \item Factoriser en utilisant une identification $X^3 - 2X^2 - 5X + 6$ sachant que $1$ est une racine de ce polynôme.
+
+    \begin{theorem}[black]{Factorisation de $X^3 - 2X^2 - 5X + 6$}
+        \begin{align*}
+            X^3 - 2X^2 - 5X + 6 &= (X - 1)Q(X) \hspace{10px} \text{avec } deg(Q) = 2 \\
+            &= (X - 1)(aX^2 + bX + c) \\
+            &= aX^3 + bX^2 + cX - aX^2 - bX - c \\
+            &= aX^3 + (b - a)X^2 + (c - b)X - c
+        \end{align*}
+
+        \noindent Par identification, on a :
+
+        $$
+            \left\{
+                \begin{array}{ll}
+                    a & 1 \\
+                    b - a & -2 \\
+                    c - b & -5 \\
+                    -c &= 6
+                \end{array}
+            \right.
+        $$
+
+        \noindent On a donc $a = 1$, $b = -1$ et $c = -6$. \\
+        Ainsi, $X^3 - 2X^2 - 5X + 6 = (X - 1)(X^2 - X - 6)$. \\
+        Or, $\Delta(X^2 - X - 6) = (-1)^2 - 4 \times 1 \times (-6) = 25 = 5^2 > 0$. \\
+        Donc le polynôme est réductible. \\
+        
+        \noindent Les racines de $X^2 - X - 6$ sont :
+
+        $$
+            X_1 = \frac{1 - 5}{2 \times 1} = -2 \text{ et } X_2 = \frac{1 + 5}{2 \times 1} = 3
+        $$
+
+        \noindent Donc, $X^3 - 2X^2 - 5X + 6 = (X - 1)(X + 2)(X - 3)$.
+    \end{theorem}
+
+    \clearpage
+    
+    \item Calculer la division euclidienne de $X^3 - X^2 - 10X - 8$ par $X + 1$ et en déduire une factorisation.
+
+    \begin{theorem}[black]{Factorisation de $X^3 - X^2 - 10X - 8$ par $X + 1$}
+        \begin{center}
+            \polylongdiv[style=D]{X^3 - X^2 - 10X - 8}{X + 1}
+        \end{center}
+
+        \noindent On a alors $X^3 - X^2 - 10X - 8 = (X + 1)(X^2 - 2X - 8)$. \\
+        Or, $\Delta(X^2 - 2X - 8) = 36 = 6^2 > 0$. \\
+        Donc, le polynôme est réductible. \\
+
+        \noindent Les racines de $X^2 - 2X - 8$ sont :
+
+        $$
+            X_1 = \frac{2 - 6}{2 \times 1} = -2 \text{ et } X_2 = \frac{2 + 6}{2 \times 1} = 4
+        $$
+
+        \noindent Donc, $X^3 - X^2 - 10X - 8 = (X + 1)(X + 2)(X - 4)$.
+    \end{theorem}
+\end{enumerate}

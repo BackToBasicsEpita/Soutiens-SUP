@@ -1,0 +1,43 @@
+\noindent On considère le polynôme $P(X) = X^4 + 2X^3 - X - 2$
+
+\begin{enumerate}
+    \item Montrer que $1$ et $-2$ sont racines de $P$.
+
+    \begin{theorem}[black]{Racines de $P$}
+        \begin{align*}
+            P(1) &= 1^4 + 2 \times 1^3 - 1 - 2 = 0 \\
+            P(-2) &= (-2)^4 + 2 \times (-2)^3 - (-2) - 2 = 0
+        \end{align*}
+
+        \noindent Donc, $1$ et $-2$ sont racines de $P$.
+    \end{theorem}
+    
+    \item En vous aidant d'une division euclidienne, factoriser $P$ en produit de polynômes irréductibles dans $\ensR[X]$.
+
+    \begin{theorem}[black]{Factorisation de $P$}
+        D'après la question (1), on a :
+
+        \begin{align*}
+            P(X) &= X^4 + 2X^3 - X - 2 \\
+            &= (X - 1)(X + 2)Q(X) \hspace{10px} \text{avec } deg(Q) = 2 \\
+            &= (X^2 + 2X - X - 2)Q(X) \\
+            &= (X^2 + X - 2)Q(X)
+        \end{align*}
+
+        \noindent Pour déterminer $Q(X)$, nous pouvons utiliser la division euclidienne.
+
+        \begin{center}
+            \polylongdiv[style=D]{X^4 + 2X^3 - X - 2}{X^2 + X - 2}
+        \end{center}
+
+        \noindent Donc, on a :
+
+        \begin{align*}
+            P(X) &= (X^2 + X - 2)(X^2 + X + 1) \\
+            &= (X - 1)(X + 2)(X^2 + X + 1)
+        \end{align*}
+
+        Sachant que $\Delta(X^2 + X + 1) < 0$, $X^2 + X + 1$ est irréductible dans $\ensR[X]$. \\
+        D'où la factorisation de $P$ en produit de polynômes irréductibles dans $\ensR[X]$.
+    \end{theorem}
+\end{enumerate}

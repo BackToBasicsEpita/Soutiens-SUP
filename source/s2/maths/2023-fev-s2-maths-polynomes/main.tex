@@ -1,0 +1,122 @@
+\documentclass[a4paper, 14px, fleqn]{article}
+
+% Packages importés
+\usepackage[utf8]{inputenc} % Encodage des entrées
+\usepackage[T1]{fontenc} % Encodage de la police
+\usepackage[french]{babel} % Support pour la langue
+\usepackage{fancyhdr} % En-têtes et pieds de page
+\usepackage{graphicx} % Ajouter des images
+\usepackage{hyperref} % Ajouter les liens dans la table de matière
+\usepackage{colortbl} % Ajouter des couleurs dans un tableau
+\usepackage{amsmath,amssymb,polynom} % Ajouter les maths
+\usepackage{mathtools} % Ajouter des maths
+\usepackage{tcolorbox} % Ajouter les cadres
+\usepackage{stmaryrd} % Ajouter les doubles brackets
+\usepackage{tikz} % Ajouter les schémas
+\usetikzlibrary{matrix,arrows,decorations.pathmorphing}
+\usepackage{verbatim} % Ajouter les matrices
+\usepackage{nicematrix} % Ajouter les matrices
+\usepackage[overload]{empheq}
+
+% Utiliser de bonnes marges
+\setlength{\hoffset}{-18px}
+\setlength{\oddsidemargin}{0px} % Marge gauche sur pages impaires
+\setlength{\evensidemargin}{9px} % Marge gauche sur pages paires
+\setlength{\marginparwidth}{54px} % Largeur de note dans la marge
+\setlength{\textwidth}{481px} % Largeur de la zone de texte (17cm)
+\setlength{\voffset}{-18px} % Bon pour DOS
+\setlength{\marginparsep}{7px} % Séparation de la marge
+\setlength{\topmargin}{0px} % Pas de marge en haut
+\setlength{\headheight}{13px} % Haut de page
+\setlength{\headsep}{10px} % Entre le haut de page et le texte
+\setlength{\footskip}{27px} % Bas de page + séparation
+\setlength{\textheight}{708px} % Hauteur de la zone de texte (25cm)
+
+% Ajouter les ensembles
+\newcommand{\ensR}{\mathbb{R}}
+\newcommand{\ensC}{\mathbb{C}}
+\newcommand{\ensK}{\mathbb{K}}
+\newcommand{\ensN}{\mathbb{N}}
+
+% Theoremes
+\usepackage{tikz, tkz-tab}
+\usepackage[framemethod=tikz]{mdframed}
+\usetikzlibrary{shapes.misc}
+
+% Les arguments des theoremes importants
+\makeatletter
+\def\mdf@@title{}
+\define@key{mdf}{title}{\def\mdf@@title{#1}}
+\def\mdf@@color{}
+\define@key{mdf}{color}{\def\mdf@@color{#1}}
+
+% Le style des theoremes
+\mdfdefinestyle{mytheo}{
+    linewidth=1pt,
+    innertopmargin=1.5\baselineskip,
+    innerbottommargin=0.7\baselineskip,
+    roundcorner=5pt,
+    backgroundcolor=\mdf@@color!05,
+    linecolor=\mdf@@color,
+    singleextra={
+        \node[xshift=10pt,thick,draw=\mdf@@color,fill=\mdf@@color!65,rounded 
+            corners,text=white,anchor=west] at (P-|O) %
+        {\strut{\bfseries\mdf@@title}};
+    }
+}
+
+% Pour definir le theme comme servant d'environement
+\newmdenv[style=mytheo]{theor}
+
+% L'environement mais cette fois il peut prendre les parametres
+\newenvironment{theorem}[2][]
+  {\begin{theor}[color=#1, title=#2]}
+  {\end{theor}}
+
+\makeatother
+
+
+% Exemples
+\newcommand{\exobox}[1]
+{
+    \begin{tcolorbox}
+    {#1}
+    \end{tcolorbox}
+}
+
+% Mettre en place les en-têtes et les pieds de pages
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{BackToBasics}
+\rhead{Mathématiques S2}
+\lfoot{\includegraphics[scale=0.15]{img/b2b.png}}
+\cfoot{\thepage}
+\rfoot{\includegraphics[scale=0.01]{img/epita.png}}
+
+\begin{document}
+
+    % Première page du document
+    \include{pages/first}
+    \clearpage
+    
+    % Page de table de matières
+    \tableofcontents
+    \clearpage
+    
+    % Page de cours
+    \section{Cours}
+    \input{pages/cours}
+    \clearpage
+    
+    % Page d'exercices
+    \section{Exercices}
+    \input{pages/exos}
+    \clearpage
+    
+    % Page de correction
+    \section{Correction}
+    \input{pages/correction}
+    \clearpage
+
+
+\end{document}
